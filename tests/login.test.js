@@ -55,8 +55,4 @@ fixture      `Login Test`
         await t.expect(logoutButton.exists).notOk()
         await t.expect(singInButton.exists).ok()
 
-
-
-
-
     })
