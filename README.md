@@ -1,11 +1,12 @@
 # Automatización de pruebas web con TestCafe ![Status badge](https://img.shields.io/badge/status-in%20progress-brightgreen)
 
-* Este proyecto nos permite automatizar de una forma sencilla cualquier pagina web.
+* Este proyecto nos permite automatizar cualquier pagina web, se utiliza el patron de diseño page object model para no duplicar el código y su mantenimiento sea más entendible y rapido.
 
 ## 🚀 Comenzando :
 
 * Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
+![Demo zero bank]()
 
 ## 📋 Pre-requisitos :
 
