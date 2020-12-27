@@ -6,7 +6,8 @@
 
 * Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
-![Demo zero bank](http://g.recordit.co/4LHfxrSmRp.gif)
+![Demo zero bank](http://g.recordit.co/Uof99Ferih.gif)
+
 
 ## 📋 Pre-requisitos :
 
