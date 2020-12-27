@@ -1,8 +1,12 @@
 {
-  "name": "testcafe-testing",
+  "name": "testcafetesting",
   "version": "1.0.0",
-  "description": "Automated testing whit Testcafe",
-  "main": "index.js",
+  "description": "Regresion web en testCafe con percy",
+  "main": "helper.js",
+  "directories": {
+    "test": "tests"
+  },
+
   "scripts": {
     "test:chrome": "testcafe chrome ./tests -s takeOnFails=true  --disable-page-caching",
     "test:chrome:5": "testcafe -c 5 chrome ./tests -s takeOnFails=true --disable-page-caching",
@@ -21,20 +25,23 @@
     "test:explorer": "testcafe ie ./tests -s takeOnFails=true --disable-page-caching",
     "test:explorer:5": "testcafe -c 5 ie ./tests -s takeOnFails=true --disable-page-caching",
     "test:explorer:headless:5": "testcafe -c 5 ie:headless ./tests -s takeOnFails=true --disable-page-caching",
-    "test:multiple": "testcafe chrome,firefox ./tests -s takeOnFails=true --disable-page-caching"
+    "test:multiple": "testcafe chrome,firefox ./tests -s takeOnFails=true --disable-page-caching",
+    "test:percy": "percy exec -- testcafe chrome ./tests"
   },
+
   "keywords": [
     "TestCafe",
+    "Percy",
     "Testing",
     "Automation"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@percy/testcafe": "^0.2.1",
     "prettier": "^2.2.1",
-    "testcafe": "^1.10.0"
-  },
-  "devDependencies": {
+    "testcafe": "^1.10.1",
     "xpath-to-css": "^1.0.5"
-  }
+  },
+  "devDependencies": {}
 }

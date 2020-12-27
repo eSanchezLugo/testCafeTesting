@@ -1,5 +1,12 @@
-import { Selector } from 'testcafe'
-import { login } from '../helper'
+import Navbar from '../page-objects/components/Navbar'
+import LoginPage from '../page-objects/pages/LoginPage'
+import AccountSummary from '../page-objects/pages/AccountSummary'
+import percySnapshot from '@percy/testcafe'
+
+
+const navbar = new Navbar()
+const loginPage = new LoginPage()
+const accountSummary = new AccountSummary()
 
 // prettier-ignore
 fixture      `Login Test`
@@ -8,30 +15,30 @@ fixture      `Login Test`
 
     test('Usuario con credenciales invalidas', async t => {
 
-        await login('invalid username', 'invalid password')
-        const errorMessage = Selector('.alert-error').innerText
-        await t.expect(errorMessage).contains('Login and/or password are wrong.')
+        await t.click(navbar.signInButton)
+        loginPage.loginToApp('invalid username', 'invalid password')
+        loginPage.waitFor(4000)
+        await percySnapshot(t, "Ingresando datos erroneos")
+        await t
+            .expect(loginPage.errorMessage.innerText)
+            .contains('Login and/or password are wrong.')
+        loginPage.waitFor(4000)
+        await percySnapshot(t, 'Pantalla con login invalido')
 
     })
 
     test('Usuario con credenciales validas', async t => {
 
-        const singInButton = Selector('#signin_button')
-        const loginForm = Selector('#login_form')
+        await t.click(navbar.signInButton)
+        loginPage.loginToApp('username', 'password')
 
-        await login ('username', 'password')
+        await t.expect(accountSummary.accountSummaryTab.exists).ok()
+        await t.expect(loginPage.loginForm.exists).notOk()
 
-        const accountSummaryTab = Selector('#account_summary_tab')
-        await t.expect(accountSummaryTab.exists).ok()
-        await t.expect(loginForm.exists).notOk()
+        await t.click(navbar.userIcon)
+        await t.click(navbar.logoutButton)
 
-        const userIcon = Selector('.icon-user')
-        await t.click(userIcon)
-
-        const logoutButton = Selector('#logout_link')
-        await t.click(logoutButton)
-
-        await t.expect(logoutButton.exists).notOk()
-        await t.expect(singInButton.exists).ok()
+        await t.expect(navbar.logoutButton.exists).notOk()
+        await t.expect(navbar.signInButton.exists).ok()
 
     })
