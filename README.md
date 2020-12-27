@@ -6,7 +6,7 @@
 
 * Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
-![Demo zero bank]()
+![Demo zero bank](http://g.recordit.co/4LHfxrSmRp.gif)
 
 ## 📋 Pre-requisitos :
 
@@ -15,6 +15,20 @@
 3. Tener instalado visual studio code.
 4. En un cmd ingresar a la ruta de nuestro directorio del proyecto, ya que estamos en el directorio ingresamos el siguiente comando y pulsamos enter:  npm install -g testcafe
 
+
+⚙ Ejecutando las pruebas :
+
+* En la terminal de visual studio code digitar el siguiente comando : npm run test:chrome
+
+
+🔩 Pruebas end-to-end :
+
+* Se verifica un usuario con credenciales validas.
+* Se verifica un usuario con credenciales no validas.
+* Se verifica que se pueda enviar una nueva contraseña al correo.
+* Se verifica que se puedan enviar comentarios.
+* Se verifica que  se pueda realizar un nuevo pago.
+* Se verifica que se pueda buscar información.
 
 
 ## 📜 Licencia :
