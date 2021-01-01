@@ -1,4 +1,4 @@
-# Automatización de pruebas web con TestCafe ![Status badge](https://img.shields.io/badge/status-in%20progress-brightgreen)
+# Automatización de pruebas web con TestCafe ![Status badge](https://img.shields.io/badge/status%20-finished-green)
 
 * Este proyecto nos permite automatizar cualquier pagina web, se utiliza el patron de diseño page object model para no duplicar el código y su mantenimiento sea más entendible y rapido.
 

@@ -6,9 +6,13 @@
   "directories": {
     "test": "tests"
   },
-
   "scripts": {
     "test:chrome": "testcafe chrome ./tests -s takeOnFails=true  --disable-page-caching",
+    "test:chrome:json": "testcafe chrome ./tests -s takeOnFails=true  --disable-page-caching --reporter json",
+    "test:chrome:xunit": "testcafe chrome ./tests -s takeOnFails=true  --disable-page-caching --reporter xunit",
+    "test:chrome:nunit": "testcafe chrome ./tests -s takeOnFails=true  --disable-page-caching --reporter nunit",
+    "test:chrome:list": "testcafe chrome ./tests -s takeOnFails=true  --disable-page-caching --reporter list",
+    "test:chrome:minimal": "testcafe chrome ./tests -s takeOnFails=true  --disable-page-caching --reporter minimal",
     "test:chrome:5": "testcafe -c 5 chrome ./tests -s takeOnFails=true --disable-page-caching",
     "test:chrome:headless": "testcafe chrome:headless ./tests -s takeOnFails=true --disable-page-caching",
     "test:chrome:headless:5": "testcafe -c 5 chrome:headless ./tests -s takeOnFails=true --disable-page-caching",
@@ -28,7 +32,6 @@
     "test:multiple": "testcafe chrome,firefox ./tests -s takeOnFails=true --disable-page-caching",
     "test:percy": "percy exec -- testcafe chrome ./tests"
   },
-
   "keywords": [
     "TestCafe",
     "Percy",
@@ -39,8 +42,14 @@
   "license": "ISC",
   "dependencies": {
     "@percy/testcafe": "^0.2.1",
+    "cafe": "0.0.6",
     "prettier": "^2.2.1",
     "testcafe": "^1.10.1",
+    "testcafe-reporter-json": "^2.2.0",
+    "testcafe-reporter-list": "^2.1.0",
+    "testcafe-reporter-minimal": "^2.1.0",
+    "testcafe-reporter-nunit": "^0.1.2",
+    "this": "^1.1.0",
     "xpath-to-css": "^1.0.5"
   },
   "devDependencies": {}
