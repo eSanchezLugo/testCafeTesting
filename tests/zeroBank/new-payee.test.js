@@ -1,5 +1,5 @@
 import { Selector } from 'testcafe'
-import { login } from '../helper'
+import { login } from '../../helper'
 
 
 // prettier-ignore

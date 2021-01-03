@@ -1,6 +1,7 @@
-import Navbar from '../page-objects/components/Navbar'
-import ForgottenPasswordPage from '../page-objects/pages/ForgottenPasswordPage'
-import LoginPage from '../page-objects/pages/LoginPage'
+import Navbar from '../../page-objects/components/Navbar'
+import ForgottenPasswordPage from '../../page-objects/pages/zeroBank/ForgottenPasswordPage'
+import LoginPage from '../../page-objects/pages/zeroBank/LoginPage'
+
 
 const navbar = new Navbar()
 const  loginPage = new  LoginPage()

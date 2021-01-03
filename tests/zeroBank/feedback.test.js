@@ -1,5 +1,6 @@
 import {Selector} from 'testcafe'
-import  FeedbackPage from '../page-objects/pages/FeedbackPage'
+import FeedbackPage from '../../page-objects/pages/zeroBank/FeedbackPage'
+
 
 const feedbackPage = new  FeedbackPage()
 
