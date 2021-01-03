@@ -1,5 +1,5 @@
 node_modules/*
 screenshots/*
 ejecutables/*
-package.json
-package-lock.json
+*.json
+!testcaferc.json
