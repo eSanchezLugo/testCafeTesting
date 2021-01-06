@@ -7,7 +7,7 @@
 * Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
 * Proyecto Zero Bank  ![Status badge](https://img.shields.io/badge/status%20-finished-green)
-* Proyecto Amazon ![Status badge](https://img.shields.io/badge/status-in%20progress-brightgreen)
+* Proyecto Mercado Libre ![Status badge](https://img.shields.io/badge/status-in%20progress-brightgreen)
 
 ![Demo zero bank](http://g.recordit.co/Uof99Ferih.gif)
 
