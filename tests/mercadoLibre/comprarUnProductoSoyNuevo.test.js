@@ -19,7 +19,7 @@ fixture     `Buscar producto`
         window.scrollBy(x, y);
     });
 
-test ("Buscar un producto", async t =>{
+test ("Comprar un producto y soy nuevo", async t =>{
 
     buscarProducto.buscarProducto('funko pop crash bandicoot')
     scrollBy(0, buscarProducto.seleccionarArticulo)
@@ -27,9 +27,10 @@ test ("Buscar un producto", async t =>{
         .click(buscarProducto.seleccionarArticulo)
         .expect(buscarProducto.tituloProducto.innerText).contains('Funko Pop Dr. Neo Cortex Crash Bandicoot Games Nuevo')
     comprarArticulo.realizarCompra()
-    await t.click(comprarArticulo.soyNuevo)
+    await t
+        .click(comprarArticulo.soyNuevo)
+    comprarArticulo.registroParaComprar('Eduardo', 'Sanchez', 'alefire666@aol.com', '$pruebaTestCafe23')
 
-        .wait(20)
 
 
 
