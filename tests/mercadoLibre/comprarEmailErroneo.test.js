@@ -30,7 +30,7 @@ test ("Comprar un producto con cuenta nueva", async t =>{
         .click(buscarProducto.seleccionarArticulo)
         .expect(buscarProducto.tituloProducto.innerText).contains('Funko Pop Dr. Neo Cortex Crash Bandicoot Games Nuevo')
     comprarArticulo.realizarCompra()
-    cuenta.cuentaErronea('esanchezlugo@gmail.com')
+    cuenta.emailErroneo('esanchezlugo@gmail.com')
     await t.wait(20)
 
 })
